@@ -91,6 +91,10 @@ WITH(
 
 SELECT * FROM user_log_format1 --11:27
 
+SELECT userid,itemid,catid
+FROM user_log_format1
+WHERE userid='328862';
+
 
 ##############################################
 CREATE TABLE train_format2(
