@@ -128,6 +128,9 @@ SELECT userid,itemid,catid
 FROM user_log_format1
 WHERE userid='328862';
 
+SELECT * FROM user_log_format1
+WHERE userid='328862'and itemid='943106';
+--查出来有两行，其实
 
 ##############################################
 CREATE TABLE train_format2(
