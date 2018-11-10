@@ -49,6 +49,39 @@ WITH(
 
 SELECT * FROM train_format1
 DELETE FROM train_format1
+
+SELECT merchantid,lable
+FROM train_format1
+WHERE lable='1';
+--得查重
+
+
+SELECT userid,merchantid,lable
+FROM train_format1
+WHERE lable='1';
+
+SELECT * FROM train_format1
+ORDER BY merchantid DESC
+--排列出来是用字符串的方式排列的，因为导入时用的时NVARCHAR(MAX)
+
+--
+SELECT userid,merchantid,lable
+FROM train_format1
+WHERE lable='1'
+ORDER BY merchantid DESC
+
+
+
+SELECT merchantid,lable
+FROM train_format1
+WHERE lable='0';
+
+SELECT merchantid,lable
+FROM train_format1
+WHERE lable='';
+
+
+
 ##############################################
 CREATE TABLE user_info_format1(
 userid NVARCHAR(MAX),

@@ -12,7 +12,7 @@ import pylab as pl
  
  
 def read_xls_file():
-    xls_data = get_data(r"E:\学习文件\大三1\可视计算\作业\data.xlsx")
+    xls_data = get_data(r"")
     print ("Get data type:", type(xls_data))
     for sheet_n in xls_data.keys():
         print (sheet_n, ":", xls_data[sheet_n])
@@ -22,15 +22,15 @@ if __name__ == '__main__':
 
 
 def xlsx_to_csv_pd():
-    data_xls = pd.read_excel('E:\学习文件\大三1\可视计算\作业\data.xlsx', index_col=0)
-    data_xls.to_csv('E:\学习文件\大三1\可视计算\作业\datadata.csv', encoding='utf-8')
+    data_xls = pd.read_excel('', index_col=0)
+    data_xls.to_csv('', encoding='utf-8')
 
 
 if __name__ == '__main__':
     xlsx_to_csv_pd()
 
 
-with open('E:\学习文件\大三1\可视计算\作业\datadata.csv') as f:
+with open('') as f:
     reader = csv.reader(f)
     for i,rows in enumerate(reader):
         if i <= 100:
@@ -39,7 +39,7 @@ with open('E:\学习文件\大三1\可视计算\作业\datadata.csv') as f:
 
 
 # 首先打开文件从文件中读取数据
-f=open('E:\学习文件\大三1\可视计算\作业\datadata.csv') # path存储的是我们的目标文件所在的位置
+f=open('') # path存储的是我们的目标文件所在的位置
 
 # 我们先打开目标文件然后读取出这个文件中的每一行
 lines = f.readlines()
@@ -54,7 +54,7 @@ def get_data(lines): # 在这里lines = f.readlines()
     return array(sizeArry)
 
 # 首先打开文件从文件中读取数据
-f=open('E:\学习文件\大三1\可视计算\作业\datadata.csv')
+f=open('')
 Lenths = get_data(f.readlines())
 
 def draw_hist(lenths):  #lenths 接受的其实是 sizeArry传来的数组 就是def get_data(lines) 返回的数据
