@@ -10,7 +10,7 @@ import numpy as np
 import pylab as pl
 
 # 打开文件，读100行
-with open('F:\GitHub\Repeat-Buyers-Prediction\Data\sample_submission.csv') as f:
+with open('F:\GitHub\Innovation-practice2\sample_submission删去首行.csv') as f:
     reader = csv.reader(f)
     for i,rows in enumerate(reader):
         if i <= 100:
@@ -19,7 +19,7 @@ with open('F:\GitHub\Repeat-Buyers-Prediction\Data\sample_submission.csv') as f:
 
 
 # 首先打开文件从文件中读取数据
-f=open('F:\GitHub\Repeat-Buyers-Prediction\Data\sample_submission.csv') # path存储的是我们的目标文件所在的位置
+f=open('F:\GitHub\Innovation-practice2\sample_submission删去首行.csv') # path存储的是我们的目标文件所在的位置
 
 # 我们先打开目标文件然后读取出这个文件中的每一行
 lines = f.readlines()
@@ -29,12 +29,13 @@ def get_data(lines): # 在这里lines = f.readlines()
     sizeArry=[] # 创建一个list,用来存储数据
     for line in lines:
         line = line.replace("\n","")  # 因为读出来的数据每一行都有一个回车符，我们要删除
-        line = int(line) # 将其转换为整数
+        # line = line.replace(",","")  # 因为读出来的数据每一行都有一个','，我们要删除
+        line = float(line) # 将其转换为整数
         sizeArry.append(line) #转换为numpy 可以识别的数组
     return array(sizeArry)
 
 # 首先打开文件从文件中读取数据
-f=open('F:\GitHub\Repeat-Buyers-Prediction\Data\sample_submission.csv')
+f=open('F:\GitHub\Innovation-practice2\sample_submission删去首行.csv')
 Lenths = get_data(f.readlines())
 
 def draw_hist(lenths):  #lenths 接受的其实是 sizeArry传来的数组 就是def get_data(lines) 返回的数据
