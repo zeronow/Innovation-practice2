@@ -57,3 +57,8 @@ def draw_hist(lenths):  #lenths 接受的其实是 sizeArry传来的数组 就�
     pl.show()
 
 draw_hist(Lenths)
+
+
+
+
+#####
