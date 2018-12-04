@@ -52,5 +52,9 @@ p(u,m) =k X i=1wi × pi(u,m), (1)
 图3显示了测试数据上单个模型的AUC分数。 两个线性模型，分解机器和Logistic回归，密切相关。 虽然他们的分数不是很高，但它们有助于混合模型中的总体AUC分数。 在集合算法族中，随机森林具有最差的AUC分数。 然而，我们发现随机森林模型的套袋可以显着提高分数。 XGBoost的最佳AUC分数为0.70282。 与亚军Gradient Boosting Machine相比，其改进率超过0.7％。 我们已经混合了大约20个具有各种参数设置和特征设置的单个模型，并且获得了0.70494的AUC分数，这比最佳单个模型（即，XGBoost）提高了0.21％。     
 ## 5. 绩效研究
 
+简写示意
+AUC (the area under the ROC curve)            //AUC（ROC曲线下面积）
+ROC 受试者工作特征曲线 （receiver operating characteristic curve，简称ROC曲线），又称为感受性曲线（sensitivity curve）。得此名的原因在于曲线上各点反映着相同的感受性，它们都是对同一信号刺激的反应，只不过是在两种不同的判定标准下所得的结果而已。
+
 
 
