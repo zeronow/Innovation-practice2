@@ -227,7 +227,8 @@ result.to_csv("C:/Users/zero/Desktop/prediction.csv", index = False)
 
 我选择的是对缺失值进行填充，我的总共样本数是260844条，其中有缺失值的样本是80条，基本上可以忽略不计，但是我也不想删去这一部分数据。虽然直接将缺失值进行删除我认为对预测结果的影响也不会太大。
 
-关于缺失值的填充，其实也是很有学问的。对于存在大部分缺失数据的预测数据集来说，选择好的缺失值填充方法就显得尤为重要。不过缺失值填充不属于这篇文章的范畴，这里我也就不再赘述。详情见？？？？？？？？
+关于缺失值的填充，其实也是很有学问的。对于存在大部分缺失数据的预测数据集来说，选择好的缺失值填充方法就显得尤为重要。不过缺失值填充不属于这篇文章的范畴，这里我也就不再赘述。详情见
+[MissingValueProcessing](https://gitlab.com/liolok/Repeat-Buyers-Prediction/blob/master/docs/MissingValueProcessing.md)
 
 至于这个报错中的`infinity or a value too large for dtype('float64')`问题我没有遇到，这里也不再赘述解决方法。我的总共样本数是260844条，其中有缺失值的样本是80条，基本上可以忽略不计，所以我直接采用`.fillna(0)`函数来对缺失值进行填充，即用`0`来填充
 缺失值。
